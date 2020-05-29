@@ -1,0 +1,225 @@
+import { CodeSurfer, CodeSurferColumns, Step } from 'code-surfer'
+import { Head, Notes } from 'mdx-deck'
+import { nightOwl } from '@code-surfer/themes'
+import Form from './form'
+
+export const theme = nightOwl
+
+<Head>
+  <title>State machines</title>
+</Head>
+
+# State machines
+
+---
+
+## What are state machines?
+
+---
+
+A finite state machine is a mathematical model of computation  
+that describes the behavior of a system that can be in only  
+one state at any given time.
+
+---
+
+Formally, finite state machines have five parts:
+
+- A finite number of states
+- A finite number of events
+- An initial state
+- A transition function that  
+  determines the next state  
+  given the current state and event
+- A (possibly empty) set of final states
+
+---
+
+Statecharts are a formalism for modeling stateful, reactive systems.
+
+- Guarded transitions
+- Actions (entry, exit, transition)
+- Extended state (context)
+- Orthogonal (parallel) states
+- Hierarchical (nested) states
+- History
+
+---
+
+<CodeSurferColumns>
+
+<Step>
+
+```js file=./form-machine.js showNumbers
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 11:17 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 18:50 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 19:27 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 28:38 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 39:46 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 47:49 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 3:9 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 52:59 file=./form-machine.js
+```
+
+<Form />
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+https://xstate.js.org/viz/?gist=f6acfdd59d287198ecd955c85d0051d2
+
+---
+
+<CodeSurferColumns>
+
+<Step>
+
+```js file=./form.js showNumbers
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 14 file=./form.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 16:20 file=./form.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 22:24 file=./form.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 30 file=./form.js
+```
+
+<Form />
+</Step>
+
+<Step>
+
+```js 52:53 file=./form.js
+```
+
+<Form />
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+- Decouples state from UI
+- Completely independent of UI frameworks
+- Finite transitions make it easier to reason about
+- Well established conventions
+
+---
+
+<CodeSurfer>
+
+```js 1:25 file=./prefill-route-machine.js showNumbers
+```
+
+```js 84:88 file=./prefill-route-machine.js
+```
+
+```js 90:94 file=./prefill-route-machine.js
+```
+
+```js 96:100 file=./prefill-route-machine.js
+```
+
+```js 102:119 file=./prefill-route-machine.js
+```
+
+```js 121:127 file=./prefill-route-machine.js
+```
+
+```js 129:157 file=./prefill-route-machine.js
+```
+
+</CodeSurfer>
+
+---
+
+- Always linear and predictable
+- Easy to see what the expected flow will be
+- Does not prevent entering specific routes
+
+---
+
+## Thoughts? Questions?
